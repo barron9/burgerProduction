@@ -10,6 +10,7 @@ import BurgerKingProduction.PrepareMeal.PrepareMulti;
 import BurgerKingProduction.PrepareMeal.PrepareSingle;
 import BurgerKingProduction.Terminal.Programme;
 
+
 import java.util.ArrayList;
 
 
@@ -37,6 +38,6 @@ public class Main {
                         .totalCost(multimeals)
         );
 
-        //new Programme().execute();
+        new Programme().execute();
     }
 }
