@@ -1,9 +1,14 @@
+/*
+ * Copyright (c) 2019. r1p.net
+ */
+
 import BurgerKingProduction.Burgers.MeatBurger;
 import BurgerKingProduction.Drinks.CocaCola;
 import BurgerKingProduction.Drinks.Lemonade;
 import BurgerKingProduction.Meal.Meal;
 import BurgerKingProduction.PrepareMeal.PrepareMulti;
 import BurgerKingProduction.PrepareMeal.PrepareSingle;
+import BurgerKingProduction.Terminal.Programme;
 
 import java.util.ArrayList;
 
@@ -27,8 +32,11 @@ public class Main {
                         .addextra(new Lemonade())
                         .addextra(new CocaCola()));
 
-        System.out.println(new PrepareMulti().totalCost(multimeals));
+        System.out.println(
+                new PrepareMulti()
+                        .totalCost(multimeals)
+        );
 
-
+        new Programme().execute();
     }
 }

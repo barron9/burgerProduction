@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. r1p.net
+ */
+
 package BurgerKingProduction.PrepareMeal;
 
 import BurgerKingProduction.Burgers.MeatBurger;
@@ -8,7 +12,7 @@ import BurgerKingProduction.Meal.Meal;
 
 public class PrepareSingle {
 
-   public Meal prepareVeganMeal() {
+    public Meal prepareVeganMeal() {
         Meal meal = new Meal();
         meal.menuName("Vegan Meal");
         meal.additem(new VeganBurger());
@@ -16,7 +20,7 @@ public class PrepareSingle {
         return meal;
     }
 
-   public Meal prepareMeatMeal(){
+    public Meal prepareMeatMeal() {
         Meal meal = new Meal();
         meal.menuName("Meat Meal");
         meal.additem(new MeatBurger());

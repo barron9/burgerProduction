@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. r1p.net
+ */
+
 package BurgerKingProduction.Drinks;
 
 import BurgerKingProduction.ItemInterface.Item;
