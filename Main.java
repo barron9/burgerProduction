@@ -37,6 +37,6 @@ public class Main {
                         .totalCost(multimeals)
         );
 
-        new Programme().execute();
+        //new Programme().execute();
     }
 }

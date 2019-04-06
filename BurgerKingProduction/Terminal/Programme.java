@@ -4,23 +4,25 @@
 
 package BurgerKingProduction.Terminal;
 
+import BurgerKingProduction.PrepareMeal.PrepareSingle;
 import BurgerKingProduction.Terminal.Constants.MealsConstants;
+import org.w3c.dom.css.RGBColor;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
 
 public class Programme {
     Frame f = new Frame();
-    Button b = new Button("click me");
+    Button b = new Button("+1 extra coca cola");
     List l = new List();
-
+    Label label = new Label();
+    TextArea ta = new TextArea();
     public void execute() {
-        bringNames();
-        buildframe();
+      //  bringNames();
+     //   buildframe();
+        new test().main();
     }
 
 
@@ -33,19 +35,34 @@ public class Programme {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 System.out.println(e.getItemSelectable().getSelectedObjects()[0]);
+                ta.setText("");
+                ta.append(new PrepareSingle().customMeal(e.getItemSelectable().getSelectedObjects()[0].toString()).showItems());
             }
         });
         l.setFont(new Font("TimesRoman", Font.PLAIN, 18));
         l.setBounds(30, 50, 200, 200);
     }
 
-    void buildframe() {
-        f.setTitle("...");
+    void extrabuttons() {
+        b.setBounds(550, 100, 200, 20);
         f.add(b);
+    }
+
+    void buildframe() {
+        ta.setSize(200, 200);
+        ta.setBackground(new Color(220,220,250));
+        ta.setBounds(250, 50, 200, 200);
+        ta.disable();
+        f.setTitle("...");
+        f.add(ta);
+        extrabuttons();
         f.add(l);
         f.setSize(900, 300);
         f.setLayout(null);
-        f.setVisible(true);
+       f.setBackground(new Color(147,112,219));
+        f.toFront();
+        f.setUndecorated (true);
+        f.setResizable(false); f.setVisible(true);
     }
 
 }

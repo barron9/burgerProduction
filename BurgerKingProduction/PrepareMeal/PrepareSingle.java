@@ -27,4 +27,13 @@ public class PrepareSingle {
         meal.additem(new CocaCola());
         return meal;
     }
+
+    public Meal customMeal(String name) {
+
+        Meal meal = new Meal();
+        meal.menuName(name);
+        meal.additem(new MeatBurger());
+        meal.additem(new CocaCola());
+        return meal;
+    }
 }
